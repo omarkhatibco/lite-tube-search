@@ -12,6 +12,7 @@ import {
   VStack,
 } from '@chakra-ui/react';
 import { useFormik } from 'formik';
+import { useUpdateQueryParam } from 'hooks';
 import { MdClear, MdSearch } from 'react-icons/md';
 import * as Yup from 'yup';
 
@@ -23,18 +24,19 @@ const validationSchema = Yup.object().shape({
 });
 
 export const SearchForm: React.FC = () => {
+  const [search, setSearch] = useUpdateQueryParam('search');
   const formik = useFormik({
     initialValues: {
-      search: '',
+      search,
     },
     validationSchema,
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+    onSubmit: ({ search }) => {
+      setSearch(search);
     },
-    onReset: () => {},
+    onReset: () => {
+      setSearch('');
+    },
   });
-
-  console.log(formik);
 
   return (
     <form onSubmit={formik.handleSubmit}>

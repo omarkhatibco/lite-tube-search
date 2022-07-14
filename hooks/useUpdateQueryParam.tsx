@@ -10,10 +10,8 @@ export const useUpdateQueryParam = (
   string | string[] | undefined,
   Dispatch<SetStateAction<string | string[] | undefined>>,
 ] => {
-  const pathname = '/';
   const value = useQueryParam(name);
-  const { query: originalQuery, push, asPath } = useRouter();
-  console.log(asPath);
+  const { query: originalQuery, push, pathname } = useRouter();
 
   const { slug, ...originalQueryParams } = originalQuery;
 
