@@ -1,7 +1,16 @@
-import '../styles/globals.css'
+// import { Providers } from 'context';
+import 'focus-visible/dist/focus-visible';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export function reportWebVitals(metric) {
+  // console.log(metric);
 }
 
-export default MyApp
+function App({ Component, pageProps }) {
+  return (
+    // <Providers>
+    <Component {...pageProps} />
+    // </Providers>
+  );
+}
+
+export default App;
