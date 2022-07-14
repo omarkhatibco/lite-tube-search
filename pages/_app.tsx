@@ -1,4 +1,4 @@
-// import { Providers } from 'context';
+import { Providers } from 'context';
 import 'focus-visible/dist/focus-visible';
 
 export function reportWebVitals(metric) {
@@ -7,9 +7,9 @@ export function reportWebVitals(metric) {
 
 function App({ Component, pageProps }) {
   return (
-    // <Providers>
-    <Component {...pageProps} />
-    // </Providers>
+    <Providers>
+      <Component {...pageProps} />
+    </Providers>
   );
 }
 
