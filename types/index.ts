@@ -56,8 +56,8 @@ export interface ChannelItem {
   etag: string;
   id: Id | string;
   snippet: Snippet;
-  contentDetails: ContentDetails;
-  statistics: Statistics;
+  contentDetails?: ContentDetails;
+  statistics?: Statistics;
 }
 
 export interface SearchListResponse {

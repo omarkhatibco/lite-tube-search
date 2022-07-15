@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import { Fragment } from 'react';
+import { SearchListResponse } from 'types';
 import urlcat from 'urlcat';
 
 import { GetStaticPaths, GetStaticProps } from 'next';
