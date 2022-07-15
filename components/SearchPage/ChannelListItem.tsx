@@ -12,10 +12,10 @@ import { ChannelItem } from 'types';
 export const ChannelListItem: React.FC<ChannelItem> = ({ snippet, id }) => {
   const { thumbnails, channelTitle, description } = snippet;
 
-  const imgUrl = '';
-  // thumbnails?.high?.url ||
-  // thumbnails?.medium?.url ||
-  // thumbnails?.default?.url;
+  const imgUrl =
+    thumbnails?.high?.url ||
+    thumbnails?.medium?.url ||
+    thumbnails?.default?.url;
 
   return (
     <VStack as='article' spacing={4} align={'stretch'} w='full'>
