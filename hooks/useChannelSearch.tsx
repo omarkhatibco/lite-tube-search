@@ -54,6 +54,7 @@ export const useChannalSearch = (): UseChannelSearchReturn => {
 
   const results = useInfiniteQuery<FetcherReturn>(search, fetcher, {
     getNextPageParam: (lastPage, pages) => lastPage?.nextPageToken,
+    enabled: !!search,
   });
 
   const {

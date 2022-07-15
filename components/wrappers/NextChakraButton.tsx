@@ -29,7 +29,7 @@ export const NextChakraButton = ({
       replace={replace}
       scroll={scroll}
       shallow={shallow}
-      prefetch={prefetch}
+      prefetch={false}
       {...chakraProps}
     >
       {children}
