@@ -1,11 +1,13 @@
-import { Box } from '@chakra-ui/react';
 import { SearchForm } from 'components/forms';
+import { ChannalList } from 'components/SearchPage';
+import { Fragment } from 'react';
 
 const Page = () => {
   return (
-    <Box>
+    <Fragment>
       <SearchForm />
-    </Box>
+      <ChannalList />
+    </Fragment>
   );
 };
 

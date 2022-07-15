@@ -11,7 +11,7 @@ export const Layout = ({ children }) => {
             Youtube Light Search
           </Heading>
         </VStack>
-        <VStack py={8} align='stretch'>
+        <VStack py={8} spacing={16} align='stretch'>
           {children}
         </VStack>
       </Container>
