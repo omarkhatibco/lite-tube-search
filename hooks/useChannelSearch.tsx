@@ -1,4 +1,4 @@
-import { useInfiniteQuery } from 'react-query';
+import { QueryFunction, useInfiniteQuery } from 'react-query';
 import { SearchListResponse } from 'types';
 import urlcat from 'urlcat';
 import { useQueryParam } from './useQueryParam';
@@ -13,7 +13,10 @@ const defaultParams = {
 
 type FetcherReturn = Pick<SearchListResponse, 'items' | 'nextPageToken'>;
 
-const fetcher = async ({ queryKey, pageParam }): Promise<FetcherReturn> => {
+const fetcher: QueryFunction<FetcherReturn> = async ({
+  queryKey,
+  pageParam,
+}) => {
   const [q] = queryKey;
   const url = urlcat('https://www.googleapis.com/youtube/v3/search', {
     ...defaultParams,
@@ -53,7 +56,7 @@ export const useChannalSearch = (): UseChannelSearchReturn => {
   const search = useQueryParam('search');
 
   const results = useInfiniteQuery<FetcherReturn>(search, fetcher, {
-    getNextPageParam: (lastPage, pages) => lastPage?.nextPageToken,
+    getNextPageParam: (lastPage) => lastPage?.nextPageToken,
     enabled: !!search,
   });
 

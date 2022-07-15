@@ -26,8 +26,9 @@ const validationSchema = Yup.object().shape({
 export const SearchForm: React.FC = () => {
   const [search, setSearch] = useUpdateQueryParam('search');
   const formik = useFormik({
+    enableReinitialize: true,
     initialValues: {
-      search,
+      search: '',
     },
     validationSchema,
     onSubmit: ({ search }) => {
@@ -64,15 +65,18 @@ export const SearchForm: React.FC = () => {
                 }}
               />
 
-              <InputRightElement width='4.5rem'>
-                <IconButton
-                  icon={<Icon as={MdClear} />}
-                  size='sm'
-                  variant={'ghost'}
-                  onClick={() => formik.resetForm()}
-                  rounded='full'
-                />
-              </InputRightElement>
+              {formik.values.search && (
+                <InputRightElement width='4.5rem'>
+                  <IconButton
+                    icon={<Icon as={MdClear} />}
+                    size='sm'
+                    variant={'ghost'}
+                    onClick={() => formik.resetForm()}
+                    rounded='full'
+                    aria-label='Clear search'
+                  />
+                </InputRightElement>
+              )}
             </InputGroup>
             {formik.errors.search && formik.touched.search && (
               <FormErrorMessage>{formik.errors.search}</FormErrorMessage>
