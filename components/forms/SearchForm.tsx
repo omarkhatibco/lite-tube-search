@@ -23,7 +23,12 @@ const validationSchema = Yup.object().shape({
     .required('Required'),
 });
 
-export const SearchForm: React.FC = () => {
+interface Props {
+  onSubmit?: (values: any) => void;
+  onReset?: () => void;
+}
+
+export const SearchForm: React.FC<Props> = ({ onSubmit, onReset }) => {
   const [search, setSearch] = useUpdateQueryParam('search');
   const formik = useFormik({
     enableReinitialize: true,
@@ -33,9 +38,11 @@ export const SearchForm: React.FC = () => {
     validationSchema,
     onSubmit: ({ search }) => {
       setSearch(search);
+      onSubmit?.(search);
     },
     onReset: () => {
       setSearch('');
+      onReset?.();
     },
   });
 
@@ -74,6 +81,7 @@ export const SearchForm: React.FC = () => {
                     onClick={() => formik.resetForm()}
                     rounded='full'
                     aria-label='Clear search'
+                    data-testid='clear-search'
                   />
                 </InputRightElement>
               )}
@@ -84,7 +92,9 @@ export const SearchForm: React.FC = () => {
           </VStack>
         </FormControl>
 
-        <Button type='submit'>Search</Button>
+        <Button type='submit' data-testid='submit'>
+          Search
+        </Button>
       </HStack>
     </form>
   );

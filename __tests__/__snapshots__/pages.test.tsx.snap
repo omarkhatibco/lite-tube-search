@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Single Channel Page should matches snapshot 1`] = `
+<div>
+  <div
+    class="css-0"
+  >
+    <div
+      class="chakra-container css-11bfyvl"
+    >
+      <div
+        class="chakra-stack css-owjkmg"
+      >
+        <svg
+          class="chakra-icon css-16rxcw4"
+          fill="currentColor"
+          focusable="false"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 576 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
+          />
+        </svg>
+        <h1
+          class="chakra-heading css-1es88li"
+        >
+          Youtube Light Search
+        </h1>
+      </div>
+      <div
+        class="chakra-stack css-5dixpk"
+      >
+        <article
+          class="chakra-stack css-160b7i3"
+        >
+          <div
+            class="css-gmuwbf"
+          >
+            <div
+              class="chakra-aspect-ratio css-zx3u55"
+            >
+              <img
+                alt="Joma Tech"
+                class="chakra-image css-1at1exv"
+                loading="lazy"
+                src="https://yt3.ggpht.com/ytc/AKedOLTFLnUPOScnD78_Lz7YCbp0PXSpPgBTI4HA0pA8=s800-c-k-c0x00ffffff-no-rj"
+              />
+            </div>
+          </div>
+          <div
+            class="chakra-stack css-aukdbg"
+          >
+            <h1
+              class="chakra-heading css-1jb3vzl"
+              data-testid="title"
+            >
+              Joma Tech
+            </h1>
+            <p
+              class="chakra-text css-jneyc"
+            >
+              1.8M
+               subscribers -
+               
+              100
+               videos
+            </p>
+            <p
+              class="chakra-text css-1cp6yu0"
+            >
+              I talk about life in Silicon Valley and at big tech companies.
+
+Follow me on:
+Instagram: http://instagram.com/jomaoppa
+Twitter: https://twitter.com/jomaoppa
+
+Business inquiries: business@joma.io
+
+            </p>
+          </div>
+          <div
+            class="css-gmuwbf"
+          >
+            <a
+              class="chakra-button css-17860co"
+              href="/"
+            >
+              Back to search
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+  <span />
+</div>
+`;

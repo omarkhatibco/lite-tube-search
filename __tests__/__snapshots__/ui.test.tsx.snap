@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChannelListItem match SnapShot 1`] = `
+<div>
+  <article
+    class="chakra-stack css-1v0sbj7"
+  >
+    <div
+      class="css-gmuwbf"
+    >
+      <div
+        class="chakra-aspect-ratio css-1qgkkae"
+      >
+        <img
+          alt="Linus Tech Tips"
+          class="chakra-image css-15k6n5f"
+          loading="lazy"
+          src=""
+        />
+      </div>
+    </div>
+    <div
+      class="chakra-stack css-fnkifr"
+    >
+      <h1
+        class="chakra-heading css-0"
+      >
+        Linus Tech Tips
+      </h1>
+      <p
+        class="chakra-text css-1cp6yu0"
+      >
+        Looking for a Tech YouTuber? Linus Tech Tips is a passionate team of "professionally curious" experts in consumer technology ...
+      </p>
+    </div>
+    <div
+      class="css-gmuwbf"
+    >
+      <a
+        class="chakra-button css-4xx2wk"
+        href="/UCXuqSBlHAE6Xw-yeJA0Tunw"
+      >
+        Goto Channel
+      </a>
+    </div>
+  </article>
+</div>
+`;

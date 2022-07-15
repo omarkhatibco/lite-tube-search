@@ -15,7 +15,6 @@ import { formatNumber } from 'utls';
 import { GetStaticPaths, GetStaticProps } from 'next';
 
 const Page: React.FC<ChannelItem> = ({ snippet, statistics }) => {
-  console.log(snippet);
   const { thumbnails, title, description } = snippet;
   const { videoCount, subscriberCount } = statistics;
 
@@ -33,7 +32,7 @@ const Page: React.FC<ChannelItem> = ({ snippet, statistics }) => {
           </AspectRatio>
         </Center>
         <VStack align={'stretch'} h='full'>
-          <Heading as='h1' size='lg'>
+          <Heading as='h1' size='lg' data-testid={'title'}>
             {title}
           </Heading>
           <Text color={'gray.600'}>
@@ -58,8 +57,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
     part: 'snippet,contentDetails,statistics',
     id,
   });
-
-  console.log(url);
 
   try {
     const res = await fetch(url);

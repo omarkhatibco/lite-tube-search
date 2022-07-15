@@ -38,7 +38,7 @@ const theme = extendTheme(
   }),
 );
 
-typeof window === 'object' && console.log(theme);
+// typeof window === 'object' && console.log(theme);
 
 export type Theme = typeof theme;
 

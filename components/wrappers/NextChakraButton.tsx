@@ -11,28 +11,27 @@ export type NextChakraButtonProps = PropsWithChildren<
 >;
 
 //  Has to be a new component because both chakra and next share the `as` keyword
-export const NextChakraButton = ({
+export const NextChakraButton: React.FC<NextChakraButtonProps> = ({
   href,
-  as,
   replace,
   scroll,
   shallow,
   prefetch,
   children,
+
   ...chakraProps
 }: NextChakraButtonProps) => {
   return (
-    <ChakraButton
-      as={NextLink}
+    <NextLink
       passHref={true}
       href={href}
       replace={replace}
-      scroll={scroll}
       shallow={shallow}
       prefetch={false}
-      {...chakraProps}
     >
-      {children}
-    </ChakraButton>
+      <ChakraButton as='a' {...chakraProps}>
+        {children}
+      </ChakraButton>
+    </NextLink>
   );
 };
