@@ -36,12 +36,28 @@ export interface Snippet {
   liveBroadcastContent: string;
   publishTime: Date;
 }
+export interface RelatedPlaylists {
+  likes: string;
+  uploads: string;
+}
+export interface ContentDetails {
+  relatedPlaylists: RelatedPlaylists;
+}
+
+export interface Statistics {
+  viewCount: string;
+  subscriberCount: string;
+  hiddenSubscriberCount: boolean;
+  videoCount: string;
+}
 
 export interface ChannelItem {
   kind: string;
   etag: string;
-  id: Id;
+  id: Id | string;
   snippet: Snippet;
+  contentDetails: ContentDetails;
+  statistics: Statistics;
 }
 
 export interface SearchListResponse {
